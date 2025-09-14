@@ -1,24 +1,27 @@
-# Economist (theory & welfare)
+# Part 1 — Economist (theory & welfare)
+## 1. Equilibrium concept
+I adopt *Nash equilibrium in mixed strategies* as the appropriate concept for *Matching Pennies*.  
+A normal-form (strategic) game is $G=(N,(S_i)_{i\in N},(u_i)_{i\in N})$: a finite player set $N$; each player $i$ has a pure-strategy set $S_i$; and a payoff function $u_i:\prod_{j\in N} S_j \to \mathbb{R}$ (Osborne 2003, 11).  
+A mixed strategy $\sigma_i$ is a probability distribution over $S_i$ (Osborne 2003, 115–16).  
+For a mixed profile $\sigma=(\sigma_1,\sigma_2)$, expected payoffs are defined in the standard way by taking expectations over pure profiles; existence of a mixed-strategy Nash equilibrium in any finite normal-form game follows from fixed-point arguments (Nash 1951, 286–295).
 
-**Scope.** This folder summarizes the theory and welfare analysis for *Matching Pennies*, with page/section citations to textbooks and papers.
+## 2. Analytical solution, efficiency, and fairness
 
-## Equilibrium concept (with citations)
-A normal-form (strategic) game is \(G=(N,(S_i)_{i\in N},(u_i)_{i\in N})\): players \(N\), pure-strategy sets \(S_i\), and payoff functions \(u_i\) [(Osborne 2003, 11)].  
-A mixed strategy \(\sigma_i\) is a probability distribution on \(S_i\) [(Osborne 2003, 115–16)].  
-Existence of mixed-strategy Nash equilibrium in any finite game follows from fixed-point arguments [(Nash 1951, 286–95)].
+**Characterization.** In *Matching Pennies*, $S_1=S_2=\{H,T\}$. The canonical payoff matrix is:
 
-## Analytical solution for Matching Pennies
-No pure-strategy NE: in each pure outcome, one player gains by deviating [(Osborne 2003, 38)].  
-Let player 1 choose \(H\) with probability \(p\), player 2 with \(q\). Indifference yields \(q=\tfrac12\) and \(p=\tfrac12\), so the unique mixed NE is \((p,q)=(\tfrac12,\tfrac12)\) [(Osborne 2003, 119–20)].
+|       | H       | T       |
+|------:|:-------:|:-------:|
+| **H** | (1, -1) | (-1, 1) |
+| **T** | (-1, 1) | (1, -1) |
 
-## Welfare/fairness (one paragraph)
-The game is zero-sum (\(B=-A\)); the equilibrium value is \(0\). Utilitarian welfare sums to zero; distributional fairness is symmetric by construction.
+Osborne’s *Example 17.1* lays out the game and its interpretation (Osborne 2003, 28). There is no pure-strategy Nash equilibrium: each pure profile gives one player a profitable deviation (Osborne 2003, 38). Let player 1 choose $H$ with probability $p$, player 2 with probability $q$. Indifference conditions yield $q=\tfrac12$ and, symmetrically, $p=\tfrac12$; thus the unique mixed-strategy equilibrium is $(p,q)=(\tfrac12,\tfrac12)$ (Osborne 2003, 119–120).
 
-## Pointers
-- Computation & solver screenshots: see `../computational_scientist/`  
-- oTree deployment & LLM sessions: see `../behavioral_scientist/`
+**Efficiency and fairness.** The game is zero-sum, so utilitarian welfare (the sum of expected payoffs) is always zero. Ex ante Pareto improvements are impossible because one player’s gain exactly equals the other’s loss. The equilibrium is symmetric, giving both players equal expected payoff (zero), which supports an equity interpretation ex ante.
 
-## References (Chicago author–date)
-- Nash, John F. 1951. “Non-Cooperative Games.” *Annals of Mathematics* 54 (2): 286–295.
-- Osborne, Martin J. 2003. *An Introduction to Game Theory*. New York: Oxford University Press.
+## 3. Interpretation, refinements, and tractability
 
+**Realism.** Perfect 50–50 randomization may be behaviorally demanding; subjects can display biases or patterns.
+
+**Multiplicity and refinements.** *Matching Pennies* has a *unique* mixed-strategy equilibrium (no pure or additional mixed equilibria) (Osborne 2003, 119–120). Refinements (e.g., trembling-hand) or noisy best response models (e.g., quantal response) can rationalize systematic deviations from perfect mixing.
+
+**Computational tractability.** For a $2\times2$ game, the equilibrium is analytically immediate; larger games may require algorithms, even though existence is guaranteed by Nash’s theorem (Nash 1951, 286–295).
