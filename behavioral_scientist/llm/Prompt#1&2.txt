@@ -1,0 +1,9 @@
+Prompt#1
+Round 1 of 7
+Instructions：
+This is a matching game. Player 1 is the 'Mismatcher' and wins if the choices mismatch; Player 2 is the 'Matcher' and wins if they match. At the end, a random round will be chosen for payment.
+In this round, you are the Matcher. Your opponent is human player. Which one will you choose, Heads or Tails?
+
+
+Prompt#2
+Round 1 of 7 This is a matching game. Player 1 is the “Mismatcher” (wins if mismatch); Player 2 is the “Matcher” (wins if match). At the end, a random round will be chosen for payment. Your opponent is human. Payoff matrix (row = Player 1 payoff, col = your payoff): You: Heads You: Tails P1: Heads ( -1, +1 ) ( +1, -1 ) P1: Tails ( +1, -1 ) ( -1, +1 ) In this round, you are the Matcher. Choose: Heads or Tails. Return JSON only: {"move":"Heads" or "Tails","reason":"one sentence"}.
