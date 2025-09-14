@@ -28,5 +28,5 @@ Osborne’s *Example 17.1* lays out the game and its interpretation (Osborne 200
 
 
 ## References
-- Osborne (2003). *An Introduction to Game Theory*. OUP. (See **pp. 11, 28, 38, 115–116, 119–120**). See BibTeX in [`refs/references.bib`](./refs/references.bib).
+- Osborne (2003). *An Introduction to Game Theory*. OUP. (See **pp. 11, 28, 38, 115–116, 119–120**). 
 - Nash (1951). “Non-Cooperative Games.” *Annals of Mathematics* 54(2): 286–295. DOI: https://doi.org/10.2307/1969529
