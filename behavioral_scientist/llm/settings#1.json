@@ -1,0 +1,17 @@
+{
+    "model": "GPT-5",
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "max_tokens": 1024,
+    "output_format": "markdown",
+    "game": {
+        "name": "Matching Pennies",
+        "rounds": 7,
+        "roles": {
+            "player1": "Mismatcher",
+            "player2": "Matcher"
+        },
+        "payoff_rule": "Randomly chosen round determines payoff",
+        "scoring": "100 points per win in selected round"
+    }
+}
