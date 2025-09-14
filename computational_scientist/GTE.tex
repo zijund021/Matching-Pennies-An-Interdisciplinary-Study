@@ -1,0 +1,16 @@
+\documentclass[12pt]{article}
+\usepackage{color}
+\usepackage{bimatrixgame}
+\renewcommand{\bimatrixrowcolor}{Red}
+\renewcommand{\bimatrixcolumncolor}{Blue}
+\begin{document}
+
+\bimatrixgame{1em}{2}{2}{Player1}{Player2}%
+{{$Heads$}{$Tails$}}%
+{{$Heads$}{$Tails$}}
+{
+\payoffpairs{1}{{\fbox{$1$}}{$-1$}}{{$-1$}{\fbox{$1$}}}
+\payoffpairs{2}{{$-1$}{\fbox{$1$}}}{{\fbox{$1$}}{$-1$}}
+}
+
+\end{document}
