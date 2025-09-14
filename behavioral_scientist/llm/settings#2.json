@@ -1,0 +1,98 @@
+{
+  "version": "1.0.0",
+  "project": {
+    "name": "Matching Pennies Reproducible Setup",
+    "description": "用于复现人类与 LLM 在 Matching Pennies 游戏中的交互配置。",
+    "created_at": "2025-09-14 11:30:27 EDT"
+  },
+  "llm": {
+    "model_name": "GPT-5 Thinking",
+    "model_id": "gpt-5-thinking",
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "max_tokens": 256,
+    "presence_penalty": 0.0,
+    "frequency_penalty": 0.0,
+    "seed": 42
+  },
+  "io": {
+    "language": "en-US",
+    "response_format": {
+      "type": "json_schema",
+      "json_schema": {
+        "name": "matching_move",
+        "schema": {
+          "type": "object",
+          "properties": {
+            "move": {
+              "type": "string",
+              "enum": [
+                "Heads",
+                "Tails"
+              ]
+            },
+            "reason": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "move",
+            "reason"
+          ],
+          "additionalProperties": false
+        },
+        "strict": true
+      }
+    },
+    "require_json_only": true,
+    "stop": []
+  },
+  "game": {
+    "rounds": 7,
+    "role_order": [
+      "Matcher",
+      "Matcher",
+      "Mismatcher",
+      "Mismatcher",
+      "Mismatcher",
+      "Mismatcher",
+      "Mismatcher"
+    ],
+    "payoff_matrix": {
+      "rows": "Player 1 (Mismatcher)",
+      "cols": "Player 2 (You/Matcher)",
+      "matrix": {
+        "P1:Heads__You:Heads": {
+          "p1": -1,
+          "you": 1
+        },
+        "P1:Heads__You:Tails": {
+          "p1": 1,
+          "you": -1
+        },
+        "P1:Tails__You:Heads": {
+          "p1": 1,
+          "you": -1
+        },
+        "P1:Tails__You:Tails": {
+          "p1": -1,
+          "you": 1
+        }
+      }
+    },
+    "payment": "随机选择 1 个回合作为支付回合（均匀分布）。",
+    "opponent": "human"
+  },
+  "prompts": {
+    "system": "You are playing Matching Pennies. Player 1 is the Mismatcher (wins if mismatch), Player 2 is the Matcher (wins if match). There are 7 rounds; in each round follow the role_order. Return output in strict JSON only per the schema, without extra text.",
+    "user_round_template": "Round {round} of 7. In this round, you are the {role}. Choose: Heads or Tails. Why? Return JSON only."
+  },
+  "reproducibility": {
+    "notes": "设定 temperature=0 与固定 seed=42 以提高可复现性；若需要随机性，可在外层程序控制抽样或抛硬币逻辑。",
+    "deterministic_sampling": true
+  },
+  "artifacts": {
+    "transcript_md": "matching_pennies_transcript.md"
+  }
+}
