@@ -25,3 +25,8 @@ Osborne’s *Example 17.1* lays out the game and its interpretation (Osborne 200
 **Multiplicity and refinements.** *Matching Pennies* has a *unique* mixed-strategy equilibrium (no pure or additional mixed equilibria) (Osborne 2003, 119–120). Refinements (e.g., trembling-hand) or noisy best response models (e.g., quantal response) can rationalize systematic deviations from perfect mixing.
 
 **Computational tractability.** For a $2\times2$ game, the equilibrium is analytically immediate; larger games may require algorithms, even though existence is guaranteed by Nash’s theorem (Nash 1951, 286–295).
+
+
+## References
+- Osborne (2003). *An Introduction to Game Theory*. OUP. (See **pp. 11, 28, 38, 115–116, 119–120**). See BibTeX in [`refs/references.bib`](./refs/references.bib).
+- Nash (1951). “Non-Cooperative Games.” *Annals of Mathematics* 54(2): 286–295. DOI: https://doi.org/10.2307/1969529
