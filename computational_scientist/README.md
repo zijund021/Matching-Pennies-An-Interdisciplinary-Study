@@ -15,7 +15,7 @@ This section explains step-by-step how to build the extensive-form + strategic-f
 ### Step-by-step instructions
 
 1. Open the GTE web app in your browser via the GTE homepage.  
-   (Savani & von Stengel 2015 explain that GTE is designed to allow interactive creation of games in extensive or strategic form and solving Nash equilibria in the browser.) :contentReference[oaicite:0]{index=0}
+   (Savani & von Stengel 2015 explain that GTE is designed to allow interactive creation of games in extensive or strategic form and solving Nash equilibria in the browser.) :
 
 2. Start a new game.
 
