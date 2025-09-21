@@ -8,6 +8,17 @@ I am deeply grateful to **Professor Luyao Zhang** for generous guidance and high
 - **Problem Set 1** selects **Matching Pennies** as the core environment and builds a full pipeline: formal analysis and welfare discussion; computational verification of equilibria using Nashpy and QuantEcon; an extensive-form rendering and SPNE check in Game Theory Explorer; and a lightweight experimental design in oTree with a human/LLM comparison. 
 - **Problem Set 2** refines the write-up (figure titles, captions, cross-referencing, formal software citations) and extends into mechanism design by testing **an all-pay auction** with AI agents (GPT-5 Thinking, DeepSeek Thinking). We run a Control (known common value V=1000) and a Treatment (unknown V with private hints). In the control, bids show over-dissipation (total bids > prize value), consistent with aggressive play in all-pay settings. In the treatment, a single-shot trial with conservative bidding and tight, symmetric hints does not display winner’s-curse overpayment; we outline minimal tweaks (wider/bias signals, multiple rounds) to surface it. 
 - All prompts, logs, and figures are included for reproducibility, and the repo documents how each tool supports analysis, computation, and experimental deployment. See tool references for Nashpy, GTE, oTree, QuantEcon, and classic winner’s-curse results.
+  
+## ✨Purpose
+Bridge core game theory with modern tooling and experimentation: formalize and verify equilibria in simple games (PS1), then extend to mechanism design by running a minimal all-pay auction with AI agents (PS2). The aim is to connect theory → computation → behavior, using reproducible code, clear figures, and concise documentation.
+## ✨Learning Outcomes
+By the end, you will be able to:
+- Formulate & analyze strategic games; derive and justify mixed-strategy equilibria (PS1).
+- Compute & validate equilibria using Python tools (Nashpy, QuantEcon) and visualize strategic/extensive forms in GTE (PS1).
+- Design & run a simple behavioral testbed in oTree (or prompt-based setup) and document prompts, rules, and decision logs (PS2).
+- Compare & interpret agent behavior (LLMs vs. theory/human intuition): measure dissipation, overpayment, and profits; evaluate evidence for winner’s-curse dynamics under information changes (PS2).
+- Write measurable outcomes and structure reports with clear objectives, following Bloom-style guidance for concise, assessable goals.
+  
 - Payoff Matrix
 <img width="1000" height="500" alt="1" src="https://github.com/user-attachments/assets/a3050c4d-7625-4500-9650-ac2d9eaa919b" />
 
