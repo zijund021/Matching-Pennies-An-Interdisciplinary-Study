@@ -1,20 +1,25 @@
 # Play to Innovate: An Interdisciplinary Approach from Game Theory to Mechanism Design in a Case Study
 
+## 💕Acknowledgment
+I am deeply grateful to **Professor Luyao Zhang** for generous guidance and high standards; her focused comments on writing, figures, software citations, and repository communication gave me clear direction and renewed confidence. I also thank **Runqi Li** for a thoughtful peer review that affirmed the balance between rigor and accessibility and encouraged a theory-to-application flow with ethical reflection. These affirming, actionable suggestions shaped the revisions below and materially improved the paper’s clarity, coherence, and usability.
+
 ## 👀Abstract  
 - This two-part project connects classic game theory with modern computational and experimental tooling. 
 - **Problem Set 1** selects **Matching Pennies** as the core environment and builds a full pipeline: formal analysis and welfare discussion; computational verification of equilibria using Nashpy and QuantEcon; an extensive-form rendering and SPNE check in Game Theory Explorer; and a lightweight experimental design in oTree with a human/LLM comparison. 
 - **Problem Set 2** refines the write-up (figure titles, captions, cross-referencing, formal software citations) and extends into mechanism design by testing **an all-pay auction** with AI agents (GPT-5 Thinking, DeepSeek Thinking). We run a Control (known common value V=1000) and a Treatment (unknown V with private hints). In the control, bids show over-dissipation (total bids > prize value), consistent with aggressive play in all-pay settings. In the treatment, a single-shot trial with conservative bidding and tight, symmetric hints does not display winner’s-curse overpayment; we outline minimal tweaks (wider/bias signals, multiple rounds) to surface it. 
 - All prompts, logs, and figures are included for reproducibility, and the repo documents how each tool supports analysis, computation, and experimental deployment. See tool references for Nashpy, GTE, oTree, QuantEcon, and classic winner’s-curse results.
-**Payoff Matrix**
-<img width="200" height="100" alt="1" src="https://github.com/user-attachments/assets/a3050c4d-7625-4500-9650-ac2d9eaa919b" />
-**GTE Extensive Form**
-<img width="200" height="100" alt="6" src="https://github.com/user-attachments/assets/06dc206b-878f-4673-91f7-685c820f256d" />
-**LLM Choice and Reason**
-<img width="200" height="100" alt="1choice reason" src="https://github.com/user-attachments/assets/07bc59e0-e18f-448e-991c-ba4373e81e96" />
-<img width="200" height="100" alt="2choice reason strategy" src="https://github.com/user-attachments/assets/4d8bf3e1-e6d9-467a-96df-92873f5fd97e" />
+- Payoff Matrix
+<img width="1000" height="500" alt="1" src="https://github.com/user-attachments/assets/a3050c4d-7625-4500-9650-ac2d9eaa919b" />
 
-## 💕Acknowledgment
-I am deeply grateful to **Professor Luyao Zhang** for generous guidance and high standards; her focused comments on writing, figures, software citations, and repository communication gave me clear direction and renewed confidence. I also thank **Runqi Li** for a thoughtful peer review that affirmed the balance between rigor and accessibility and encouraged a theory-to-application flow with ethical reflection. These affirming, actionable suggestions shaped the revisions below and materially improved the paper’s clarity, coherence, and usability.
+- GTE Extensive Form
+<img width="1000" height="500" alt="6" src="https://github.com/user-attachments/assets/06dc206b-878f-4673-91f7-685c820f256d" />
+
+- LLM_Choice_and_Reason in game
+<img width="1000" height="500" alt="1choice reason" src="https://github.com/user-attachments/assets/07bc59e0-e18f-448e-991c-ba4373e81e96" />
+
+- LLM_Choice_and_Reason in auction
+<img width="832" height="441" alt="C_GPT5" src="https://github.com/user-attachments/assets/9e85f4a6-3575-4751-9767-e6308fbca72f" />
+
 
 ## 🔧Tools/Platforms you need:
 - Nashpy (Python)
