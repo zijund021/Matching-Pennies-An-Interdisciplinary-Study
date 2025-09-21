@@ -7,7 +7,8 @@
 - **Prompts**: single “bid card” per arm; output restricted to one non-negative number (no text). In T1, each agent also received its own private hint about 𝑉.
 - **Strategy Notes**: GPT (C): aggressive mid-high bid consistent with “pay to secure the prize.” DeepSeek (C): moderate bid (500), less aggressive than GPT. GPT (T1): corner choice (0) under uncertainty—avoids dissipation but forfeits winning. DeepSeek (T1): “half-of-expected-value” style bid (500)—cautious, unlikely to overpay when V is near 1000.
 - **Hypothesis Check**: H1 (No curse in Control): Supported. Differences reflect aggressiveness, not misestimation; dissipation >1 indicates overbidding in all-pay. H2 (Winner’s curse in T1): Not confirmed in this trial. Bids were too conservative (0/500) and hints likely too tight/symmetric to produce overpayment.
-
+## 📃Files contained
+4 Screenshots and Problem Set#2
 ## 📸Screenshots
 **C:GPT-5**
 <img width="832" height="441" alt="a" src="https://github.com/user-attachments/assets/023c20d4-e4c6-41ed-b118-855ab9bcc47a" />
