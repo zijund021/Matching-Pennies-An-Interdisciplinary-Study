@@ -72,6 +72,13 @@ Privacy: transcripts/screen captures do not include personal identifying informa
 Equal treatment: both players have same information under same prompt conditions; changes in prompt only affect visibility, not fairness of rules.
 
 
-## Reference / Tool
-
-Chen, D. L., Martin Schonger, and Chris Wickens. 2016. “oTree - An open-source platform for laboratory, online, and field experiments.” Journal of Behavioral and Experimental Finance 9: 88-97. (Required citation if publishing experiments made with oTree.)
+## 🐱References 
+- Baye, Michael R., Dan Kovenock, and Casper G. de Vries. 1996. “The All-Pay Auction with Complete Information.” Economic Theory 8 (2): 291–305. \url{https://doi.org/10.1007/BF01211819}
+- Camerer, Colin F. 2003. *Behavioral Game Theory: Experiments in Strategic Interaction*. Princeton, NJ: Princeton University Press.
+- Chen, Daniel L., Martin Schonger, and Chris Wickens. 2016. “oTree—An Open-Source Platform for Laboratory, Online, and Field Experiments.” *Journal of Behavioral and Experimental Finance* 9: 88–97. https://doi.org/10.1016/j.jbef.2015.12.001.
+- Kagel, John H., and Dan Levin. 1986. “The Winner’s Curse and Public Information in Common Value Auctions.” American Economic Review 76 (5): 894–920.
+- Knight, Vincent. 2021. *Nashpy: A Python Library for the Computation of Equilibria of 2-Player Strategic Games*, Version 0.0.28. Documentation. https://nashpy.readthedocs.io/en/v0.0.28/.
+- Nash, John F. 1951. “Non-Cooperative Games.” *Annals of Mathematics* 54 (2): 286–295.
+- Osborne, Martin J. 2003. *An Introduction to Game Theory*. New York: Oxford University Press.
+- Savani, Rahul, and Bernhard von Stengel. 2015. “Game Theory Explorer—Software for the Applied Game Theorist.” *Computational Management Science* 12: 5–33.
+- Sargent, Thomas J., and John Stachurski. 2021. *Quantitative Economics with Python*, Version 0.5.1. Online book. https://python.quantecon.org/.
