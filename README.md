@@ -77,9 +77,9 @@ Across PS1 (strategic games), PS2 (mechanism design & auctions), and classroom c
 ---
 
 ## Embedded Media
-- **Poster (PNG/PDF).**  
-  ![Project Poster](./docs/Project Poster.pdf "Poster")  
+- **Poster (PDF).**  [Project Poster.pdf](https://github.com/user-attachments/files/22879275/Project.Poster.pdf)
 
+  
 ---
 
 ## Citation & Software Credits
