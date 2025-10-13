@@ -62,8 +62,8 @@ Across PS1 (strategic games), PS2 (mechanism design & auctions), and classroom c
 
 ### 4) Documentation
 - **Final report & LaTeX:** `docs/`  
-- **Poster:** `docs/Project Poster.pdf.*` (PDF/PNG)  
-- **Field trip reflection:** `docs/FieldTripReflection.md.*`
+- **Poster:** `docs/Project Poster.pdf` (PDF/PNG)  
+- **Field trip reflection:** `docs/FieldTripReflection.md`
 
 ---
 
@@ -77,7 +77,8 @@ Across PS1 (strategic games), PS2 (mechanism design & auctions), and classroom c
 ---
 
 ## Embedded Media
-- **Poster (PDF).**  [Project Poster.pdf](https://github.com/user-attachments/files/22879275/Project.Poster.pdf)
+- **Poster (PDF/PNG).**  [Project Poster.pdf](https://github.com/user-attachments/files/22879275/Project.Poster.pdf)
+<img width="351" height="468" alt="Project Poster" src="https://github.com/user-attachments/assets/3df5a10c-0f56-47d8-a663-44488af5a3c0" />
 
   
 ---
