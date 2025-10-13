@@ -1,80 +1,96 @@
-# Play to Innovate: An Interdisciplinary Approach from Game Theory to Mechanism Design in a Case Study
+# Play to Innovate: An Interdisciplinary Approach from Game Theory to Mechanism Design
 
-## 💕Acknowledgment
-I am deeply grateful to **Professor Luyao Zhang** for generous guidance and high standards; her focused comments on writing, figures, software citations, and repository communication gave me clear direction and renewed confidence. I also thank **Runqi Li** for a thoughtful peer review that affirmed the balance between rigor and accessibility and encouraged a theory-to-application flow with ethical reflection. These affirming, actionable suggestions shaped the revisions below and materially improved the paper’s clarity, coherence, and usability.
-
-## 👀Abstract  
-- This two-part project connects classic game theory with modern computational and experimental tooling. 
-- **Problem Set 1** selects **Matching Pennies** as the core environment and builds a full pipeline: formal analysis and welfare discussion; computational verification of equilibria using Nashpy and QuantEcon; an extensive-form rendering and SPNE check in Game Theory Explorer; and a lightweight experimental design in oTree with a human/LLM comparison. 
-- **Problem Set 2** refines the write-up (figure titles, captions, cross-referencing, formal software citations) and extends into mechanism design by testing **an all-pay auction** with AI agents (GPT-5 Thinking, DeepSeek Thinking). We run a Control (known common value V=1000) and a Treatment (unknown V with private hints). In the control, bids show over-dissipation (total bids > prize value), consistent with aggressive play in all-pay settings. In the treatment, a single-shot trial with conservative bidding and tight, symmetric hints does not display winner’s-curse overpayment; we outline minimal tweaks (wider/bias signals, multiple rounds) to surface it. 
-- All prompts, logs, and figures are included for reproducibility, and the repo documents how each tool supports analysis, computation, and experimental deployment. See tool references for Nashpy, GTE, oTree, QuantEcon, and classic winner’s-curse results.
-  
-## ✨Purpose
-Bridge core game theory with modern tooling and experimentation: formalize and verify equilibria in simple games (PS1), then extend to mechanism design by running a minimal all-pay auction with AI agents (PS2). The aim is to connect theory → computation → behavior, using reproducible code, clear figures, and concise documentation.
-## ✨Learning Outcomes
-By the end, you will be able to:
-- Formulate & analyze strategic games; derive and justify mixed-strategy equilibria (PS1).
-- Compute & validate equilibria using Python tools (Nashpy, QuantEcon) and visualize strategic/extensive forms in GTE (PS1).
-- Design & run a simple behavioral testbed in oTree (or prompt-based setup) and document prompts, rules, and decision logs (PS2).
-- Compare & interpret agent behavior (LLMs vs. theory/human intuition): measure dissipation, overpayment, and profits; evaluate evidence for winner’s-curse dynamics under information changes (PS2).
-- Write measurable outcomes and structure reports with clear objectives, following Bloom-style guidance for concise, assessable goals.
-  
-- Payoff Matrix
-<img width="1000" height="500" alt="1" src="https://github.com/user-attachments/assets/a3050c4d-7625-4500-9650-ac2d9eaa919b" />
-
-- GTE Extensive Form
-<img width="1000" height="500" alt="6" src="https://github.com/user-attachments/assets/06dc206b-878f-4673-91f7-685c820f256d" />
-
-- LLM_Choice_and_Reason in game
-<img width="1000" height="500" alt="1choice reason" src="https://github.com/user-attachments/assets/07bc59e0-e18f-448e-991c-ba4373e81e96" />
-
-- LLM_Choice_and_Reason in auction
-<img width="832" height="441" alt="C_GPT5" src="https://github.com/user-attachments/assets/9e85f4a6-3575-4751-9767-e6308fbca72f" />
-
-
-## 🔧Tools/Platforms you need:
-- Nashpy (Python)
-- QuantEcon
-- Game Theory Explorer (GTE)
-- oTree
-- Colab
-- LLMs as agents — GPT-5 Thinking and DeepSeek Thinking
-- Overleaf
-- GitHub
-
-## 📖Task Summary  
-This project explores strategic behavior in **Matching Pennies and an auction design** across three lenses:
-
-1. **Theory** – Derive the mixed-strategy Nash equilibrium, show uniqueness, and analyze efficiency/fairness in the zero-sum context.  
-2. **Computation + Visualization** – Use Python (NashPy, QuantEcon) and GTE to compute equilibria, verify payoff matrices, and build extensive-form & strategic-form representations.  
-3. **Behavior + Prompting** – Conduct sessions with human participants and with ChatGPT-5 under two visibility conditions (rule-only vs full-matrix), observe how showing payoff structure influences randomness, heuristic deviations, and alignment with equilibrium.
-4. **All-Pay Auction with AI Agents** – Two-bidder, one-shot, first-price all-pay auction (highest bid wins; everyone pays own bid).
-
-
-
-## 🪜Reproduction Steps  
-1. Review theory + welfare in `economist/README.md`.  
-2. In `computational_scientist/`, open `ProblemSet_1_20250914.ipynb` (Colab export) and run all cells.  
-3. View GTE screenshots and settings in `computational_scientist/gte/` (tree + solver).  
-4. Navigate to `behavioral_scientist/README.md` and deploy/run the oTree app.  
-5. Examine LLM session artifacts in `behavioral_scientist/llm/` (prompts, transcript, settings.json) and human session screenshots.
-6. Check `mechanism_design/`for auction design and outcomes.
+> **Abstract.**  
+> This project connects classic game theory with modern computation and behavioral testing.  
+> Part 1 formalizes strategic games (Matching Pennies), proves the mixed-strategy equilibrium, and evaluates efficiency/fairness with reproducible computation and extensive-form checks.  
+> Part 2 extends to **mechanism design** via a two-bidder **first-price all-pay auction**, testing winner’s-curse claims on LLM agents under control vs. private-hints treatments.  
+> All code, prompts, and figures are organized for review and replication.
 
 ---
 
-## 🎺Point-by-Point Response
-1. **Writing and Figure Presentation**，I revised：Standardized figure titles, captions, and cross-references; e.g., renamed Fig. 1 to Payoff matrix for Matching Pennies with \label{fig:mp-bimatrix}; merged former Figs. 2–5 into a 2×2 panel as Fig. 2 (Solver outputs confirming theory, \label{fig:mp-solvers}); combined the GTE tree and equilibrium into Fig. 3 (a–b) with labels \label{fig:gte-tree}, \label{fig:gte-solver},and panel \label{fig:gte-panels}.
-2. **Software Citations**，I revised：Appended a Chicago-style References block in the manuscript and mirrored it at the bottom of the root README.md (Nashpy, GTE, QuantEcon, oTree), with DOIs/URLs and access dates.
-3. **GitHub Enhancements**，I revised：Updated the root README.md: added Overview (purpose, tools), a Quick Start (env setup, run commands, reproduction notes), and a Key Figures gallery with embedded screenshots and one-sentence captions; included a short citation block at the end.
+## Authors & Roles
+- **Zijun Ding** — *Economist; Computational Scientist; Behavioral Scientist; Mechanism Designer*  
+  (lead on theory, code, experimental design, and write-up)
 
 ---
-### 🐱References 
-- Baye, Michael R., Dan Kovenock, and Casper G. de Vries. 1996. “The All-Pay Auction with Complete Information.” Economic Theory 8 (2): 291–305. \url{https://doi.org/10.1007/BF01211819}
-- Camerer, Colin F. 2003. *Behavioral Game Theory: Experiments in Strategic Interaction*. Princeton, NJ: Princeton University Press.
-- Chen, Daniel L., Martin Schonger, and Chris Wickens. 2016. “oTree—An Open-Source Platform for Laboratory, Online, and Field Experiments.” *Journal of Behavioral and Experimental Finance* 9: 88–97. https://doi.org/10.1016/j.jbef.2015.12.001.
-- Kagel, John H., and Dan Levin. 1986. “The Winner’s Curse and Public Information in Common Value Auctions.” American Economic Review 76 (5): 894–920.
-- Knight, Vincent. 2021. *Nashpy: A Python Library for the Computation of Equilibria of 2-Player Strategic Games*, Version 0.0.28. Documentation. https://nashpy.readthedocs.io/en/v0.0.28/.
-- Nash, John F. 1951. “Non-Cooperative Games.” *Annals of Mathematics* 54 (2): 286–295.
-- Osborne, Martin J. 2003. *An Introduction to Game Theory*. New York: Oxford University Press.
-- Savani, Rahul, and Bernhard von Stengel. 2015. “Game Theory Explorer—Software for the Applied Game Theorist.” *Computational Management Science* 12: 5–33.
-- Sargent, Thomas J., and John Stachurski. 2021. *Quantitative Economics with Python*, Version 0.5.1. Online book. https://python.quantecon.org/.
+
+## Disclaimer
+This repository supports the **final research proposal** submitted to **COMSCI/ECON 206: Computational Microeconomics**, instructed by **Prof. Luyao Zhang** at **Duke Kunshan University** in **Autumn 2025**.
+
+---
+
+## Acknowledgments
+- **Faculty & peers.** Prof. Luyao Zhang for guidance; peer reviewers **Runqi Li** and **Ky Boughton** for constructive feedback.  
+- **LLM agents.** GPT-5 Thinking; DeepSeek Thinking.  
+- **Open-source communities.** **Nashpy**, **QuantEcon**, **Game Theory Explorer (GTE)**, **oTree**, **Matplotlib**, **Jupyter/Colab**, **LaTeX/Overleaf**, and **GitHub**.
+
+---
+
+## Statement of Growth
+Across PS1 (strategic games), PS2 (mechanism design & auctions), and classroom collaborations, I:
+- **Strengthened theory → computation → behavior** flow: clear assumptions & equilibrium concepts; verified with Python (Nashpy/QuantEcon) and GTE; deployed lightweight human/LLM sessions.
+- **Improved research hygiene:** figure titling, captions, cross-referencing; formal software citations; repository navigation and communication.
+- **Expanded design perspective:** built and evaluated minimal mechanisms (e.g., all-pay auction) and analyzed information salience (matrix visibility) on agent behavior.
+- **Deepened professional skills:** collaborative review, reproducible pipelines, and ethically aware write-ups aligned with SDG-oriented impact.
+
+---
+
+## Table of Contents
+- [`economist/`](./economist/) — Theory notes, welfare & fairness analysis, formatted figures. :contentReference[oaicite:3]{index=3}  
+- [`computational_scientist/`](./computational_scientist/) — Notebooks & scripts (Nashpy/QuantEcon), GTE artifacts. :contentReference[oaicite:4]{index=4}  
+- [`behavioral_scientist/`](./behavioral_scientist/) — Human & LLM sessions (oTree setup, prompts, logs). :contentReference[oaicite:5]{index=5}  
+- [`mechanism_design/`](./mechanism_design/) — Auction design (control/treatment), prompts, outcomes. :contentReference[oaicite:6]{index=6}  
+- [`visualizations/`](./visualizations/) — Key images & plots. :contentReference[oaicite:7]{index=7}  
+- [`docs/`](./docs/) — Final PDF/LaTeX, poster, field-trip reflection. :contentReference[oaicite:8]{index=8}  
+
+> Tip: This README follows GitHub’s guidance on repository docs—lead with purpose, then give scannable navigation and links. :contentReference[oaicite:9]{index=9}
+
+---
+
+## Navigation Instructions
+
+### 1) Equilibria computation (PS1)
+- **Normal form & mixed NE:** see `computational_scientist/` notebooks (Nashpy) and `economist/` derivations.  
+- **Extensive form & SPNE:** see `computational_scientist/gte/` screenshots/settings and notes in `economist/`.  
+- **Key figures:** payoff matrix & solver panels in `visualizations/`.
+
+### 2) Mechanism design & simulations (PS2)
+- **Auction prompts & runs:** `mechanism_design/` (Control: known \(V=1000\); Treatment: private hints).  
+- **Outputs:** bids, dissipation, and brief interpretations per run.  
+- **How to reproduce:** run prompt scripts or replay LLM logs; extend by varying hint dispersion/bidders.
+
+### 3) Visualizations & outputs
+- PNGs/SVGs in `visualizations/`. Link back from report sections via relative paths.
+
+### 4) Documentation
+- **Final report & LaTeX:** `docs/`  
+- **Poster:** `docs/poster.*` (PDF/PNG)  
+- **Field trip reflection:** `docs/field_trip.*`
+
+> For reviewers: each folder begins with a short README or index where applicable, to reduce hunting for files.
+
+---
+
+## Quick Start (Reproducibility)
+1. **Clone** the repo and open `computational_scientist/` notebooks in Jupyter/Colab.  
+2. **Install** Python deps (see notebook headers).  
+3. **Run** all cells to regenerate payoff matrices, solver checks, and figures.  
+4. **Browse** `behavioral_scientist/` for oTree setup and LLM/human session logs; use provided prompts for replication.  
+5. **Review** `mechanism_design/` for control vs. treatment runs; adjust parameters (hint width, tie-break seeds) to stress-test winner’s-curse dynamics.
+
+---
+
+## Embedded Media
+- **Poster (PNG/PDF).**  
+  ![Project Poster](./docs/poster.png "Poster")  
+  > If your poster lives elsewhere (e.g., Canva), include a public link here as well.
+
+---
+
+## Citation & Software Credits
+Please cite the tools used (Nashpy, QuantEcon, GTE, oTree, etc.) as listed in the paper’s References.
+
+---
+
+## License
+[MIT](./LICENSE)
