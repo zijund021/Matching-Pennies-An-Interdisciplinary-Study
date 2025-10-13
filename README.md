@@ -3,7 +3,7 @@
 > **Abstract.**  
 > This project connects classic game theory with modern computation and behavioral testing.  
 > Part 1 formalizes strategic games (Matching Pennies), proves the mixed-strategy equilibrium, and evaluates efficiency/fairness with reproducible computation and extensive-form checks.  
-> Part 2 extends to **mechanism design** via a two-bidder **first-price all-pay auction**, testing winner’s-curse claims on LLM agents under control vs. private-hints treatments.  
+> Part 2 extends to **mechanism design** via a two-bidder **first-price all-pay auction**, testing winner’s-curse claims on LLM agents under control vs. private-hints treatments. Then followed by a voting and institution simulation.  
 > All code, prompts, and figures are organized for review and replication.
 
 ---
@@ -36,14 +36,12 @@ Across PS1 (strategic games), PS2 (mechanism design & auctions), and classroom c
 ---
 
 ## Table of Contents
-- [`economist/`](./economist/) — Theory notes, welfare & fairness analysis, formatted figures. :contentReference[oaicite:3]{index=3}  
-- [`computational_scientist/`](./computational_scientist/) — Notebooks & scripts (Nashpy/QuantEcon), GTE artifacts. :contentReference[oaicite:4]{index=4}  
-- [`behavioral_scientist/`](./behavioral_scientist/) — Human & LLM sessions (oTree setup, prompts, logs). :contentReference[oaicite:5]{index=5}  
-- [`mechanism_design/`](./mechanism_design/) — Auction design (control/treatment), prompts, outcomes. :contentReference[oaicite:6]{index=6}  
-- [`visualizations/`](./visualizations/) — Key images & plots. :contentReference[oaicite:7]{index=7}  
-- [`docs/`](./docs/) — Final PDF/LaTeX, poster, field-trip reflection. :contentReference[oaicite:8]{index=8}  
-
-> Tip: This README follows GitHub’s guidance on repository docs—lead with purpose, then give scannable navigation and links. :contentReference[oaicite:9]{index=9}
+- [`economist/`](./economist/) — Theory notes, welfare & fairness analysis, formatted figures. 
+- [`computational_scientist/`](./computational_scientist/) — Notebooks & scripts (Nashpy/QuantEcon), GTE artifacts. 
+- [`behavioral_scientist/`](./behavioral_scientist/) — Human & LLM sessions (oTree setup, prompts, logs). 
+- [`mechanism_design/`](./mechanism_design/) — Auction design (control/treatment), prompts, outcomes. 
+- [`visualizations/`](./visualizations/) — Key images & plots.
+- [`docs/`](./docs/) — Final PDF/LaTeX, poster, field-trip reflection.
 
 ---
 
@@ -64,10 +62,8 @@ Across PS1 (strategic games), PS2 (mechanism design & auctions), and classroom c
 
 ### 4) Documentation
 - **Final report & LaTeX:** `docs/`  
-- **Poster:** `docs/poster.*` (PDF/PNG)  
-- **Field trip reflection:** `docs/field_trip.*`
-
-> For reviewers: each folder begins with a short README or index where applicable, to reduce hunting for files.
+- **Poster:** `docs/Project Poster.pdf.*` (PDF/PNG)  
+- **Field trip reflection:** `docs/FieldTripReflection.md.*`
 
 ---
 
@@ -82,8 +78,7 @@ Across PS1 (strategic games), PS2 (mechanism design & auctions), and classroom c
 
 ## Embedded Media
 - **Poster (PNG/PDF).**  
-  ![Project Poster](./docs/poster.png "Poster")  
-  > If your poster lives elsewhere (e.g., Canva), include a public link here as well.
+  ![Project Poster](./docs/Project Poster.pdf "Poster")  
 
 ---
 
